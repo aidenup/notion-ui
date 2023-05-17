@@ -2,17 +2,26 @@
   "name": "notion-ui",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "aiden",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "prepare": "husky install"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@mistjs/eslint-config-vue-jsx": "^0.0.7",
+    "@mistjs/tsconfig": "^1.1.1",
+    "@mistjs/tsconfig-vue": "^1.1.2",
+    "@types/node": "^20.1.7",
     "eslint": "^8.40.0",
+    "husky": "^8.0.3",
     "prettier": "^2.8.8",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vite": "^4.3.7",
+    "vitest": "^0.31.1"
   }
 }
