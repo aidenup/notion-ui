@@ -8,7 +8,14 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "vitepress dev site",
+    "build:site": "vitepress build site",
+    "preview": "vitepress preview site",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.vue --fix"
+  },
+  "dependencies": {
+    "vue": "^3.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
@@ -17,15 +24,24 @@
     "@mistjs/tsconfig": "^1.1.1",
     "@mistjs/tsconfig-vue": "^1.1.2",
     "@types/node": "^20.1.7",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
     "eslint": "^8.40.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4",
     "vite": "^4.3.7",
+    "vitepress": "1.0.0-alpha.75",
     "vitest": "^0.31.1"
   },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
+  },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,vue}": "exlint --fix"
+    "*.{js,jsx,ts,tsx,vue}": "eslint --fix"
   }
 }
